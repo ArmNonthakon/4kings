@@ -28,7 +28,7 @@ run คำสั่ง
 python -m uvicorn main:app --reload
 ```
 run web on port [127.0.0.1:8000](http://127.0.0.1:8000/)
-## Link url
+## Link url (ไม่ต้องติดตั้ง)
 หรือคลิกที่ link [4kings-click me!!](https://deploy-4kings.onrender.com/)
 ## เครดิต
 
