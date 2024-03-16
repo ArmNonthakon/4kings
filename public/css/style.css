@@ -9,11 +9,11 @@ body{
     font-style: italic;
 }
 img{
-    animation: mymove 2s;
+    animation: mymove 1s;
 }
 #head {
     font-size: 29px;
-    animation: mymove 2s;
+    animation: mymove 1s;
 }
 label {
     font-size: 24px;
@@ -34,7 +34,7 @@ form {
     width: 37%;
     margin-left: 2%;
     margin-top: 20px;
-    animation: mymove 2s;
+    animation: mymove 1s;
 }
 #sub {
     width: 100%;
@@ -68,6 +68,7 @@ button:hover {
     align-items: center;
     flex-direction: column;
     width: 100%;
+    animation: mymove 1s;
 }
 #submit-number{
     width: 10%;
