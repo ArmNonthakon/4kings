@@ -57,9 +57,9 @@ def classify4King(inputNameMember):#ฟังชั่นรับค่า arra
                         break
                 else:
                     continue
-    else:                             #เคสที่สอง คือ แต่ละโรงเรียนก็จะเปิดรับคนตามจำนวน num ซึ่งจะมีจำนวนคนที่จะเกินมา 1-2 คน วิธีคำนวณ                                    
-        studentLeft = []              #วิธีคำนวณ ก็จะวนลูปเช็คไปเรื่อยๆจนครบ ก็จะเหลือเศษออกมา ซึ่งถ้าหากมีโรงเรียนที่ยังไม่เต็มตามจำนวน Num
-        for name in inputNameMember:  #ก็จำเป็นที่จะต้องส่งจำนวนเข้าไปจนเต็ม และเพิ่มค่า num และวนเช็คจนครบทุกคน
+    else:                                   #เคสที่สอง คือ แต่ละโรงเรียนก็จะเปิดรับคนตามจำนวน num ซึ่งจะมีจำนวนคนที่จะเกินมา 1-2 คน วิธีคำนวณ                                    
+        studentLeft = []                    #วิธีคำนวณ ก็จะวนลูปเช็คไปเรื่อยๆจนครบ ก็จะเหลือเศษออกมา ซึ่งถ้าหากมีโรงเรียนที่ยังไม่เต็มตามจำนวน Num
+        for name in inputNameMember:        #ก็จำเป็นที่จะต้องส่งจำนวนเข้าไปจนเต็ม และเพิ่มค่า num และวนเช็คจนครบทุกคน
             schoolChoose= model.predict(name, k=2)
             for nameSchool in school:
                 if schoolChoose == nameSchool:
@@ -74,8 +74,6 @@ def classify4King(inputNameMember):#ฟังชั่นรับค่า arra
         for name in studentLeft:
             schoolChoose = model.predict(name, k=2)
             while(True):              
-                if len(result[schoolChoose]) != num:
-                    result[schoolChoose].append(name)
                 schoolLeft = []
                 count = 0
                 for nameSchool in school:
